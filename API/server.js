@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const userRouter = require("./routes/userRouter");
 const server = express();
 server.use(cors());
 server.use(express.json());
@@ -14,6 +14,8 @@ server.use(function (req, res, next) {
   next();
 });
 const Global = require("./database/models/global-model");
+server.use("/users", userRouter);
+
 server.get("/", (req, res) => {
   Global.getAll("users").then((data) => {
     res.status(200).json({ message: "Up and running", data: data });
