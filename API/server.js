@@ -4,6 +4,7 @@ const userRouter = require("./routes/userRouter");
 const server = express();
 server.use(cors());
 server.use(express.json());
+const restaurantRouter = require("./routes/restaurantsRouter");
 server.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
   res.header(
@@ -15,21 +16,9 @@ server.use(function (req, res, next) {
 });
 const Global = require("./database/models/global-model");
 server.use("/users", userRouter);
-
+server.use("/restaurants", restaurantRouter);
 server.get("/", (req, res) => {
-  Global.getAll("users").then((data) => {
-    res.status(200).json({ message: "Up and running", data: data });
-  });
-});
-server.post("/", (req, res) => {
-  Global.add({})
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
-    });
+  res.status(200).json({ message: "Up and running" });
 });
 
 module.exports = server;

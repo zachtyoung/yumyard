@@ -3,11 +3,13 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("resturants", function (table) {
+  return knex.schema.createTable("restaurants", function (table) {
     table.increments("id").primary();
     table.string("name").notNullable();
     table.string("password").notNullable();
     table.jsonb("location").notNullable();
+    table.jsonb("menu");
+    table.jsonb("photos");
     table.timestamps(true, true);
   });
 };
@@ -17,5 +19,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable("resturants");
+  return knex.schema.dropTable("restaurants");
 };

@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-
 function generate(user) {
   const payload = {
     subject: user.id,
@@ -9,7 +8,8 @@ function generate(user) {
   const opttions = {
     expiresIn: "8h",
   };
-  return (token = sign(payload, secret, opttions));
+  return (token = jwt.sign(payload, secret, opttions));
 }
-
-exports.generate = generate;
+module.exports = {
+  generate,
+};
