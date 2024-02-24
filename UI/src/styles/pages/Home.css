@@ -1,0 +1,55 @@
+.home {
+  width: 100%;
+  max-width: 500px;
+}
+.logo {
+  width: 90%;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+h3 {
+  margin: 0 auto;
+  width: max-content;
+}
+
+.home__admin_bar {
+  width: 90%;
+  margin: 0 auto;
+}
+input {
+}
+.home__search_input {
+  width: 90%;
+
+  border: none;
+  height: 30px;
+}
+.home__search_bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__saved_resturants_horizontal_list {
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  overflow-x: auto;
+}
+.home__saved_resturant_card {
+  background-color: black;
+  min-width: 200px;
+  height: 180px;
+}
+h2 {
+  width: 90%;
+  margin: 1rem auto;
+}
+form {
+  width: 100%;
+  margin: 0 auto;
+}
