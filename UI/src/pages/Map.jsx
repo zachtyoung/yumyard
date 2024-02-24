@@ -1,5 +1,11 @@
-const Map = () => {
-	return <div>Map</div>
-}
+import NavBar from "../components/NavBar";
 
-export default Map
+const Map = () => {
+  return (
+    <div>
+      Map <NavBar />
+    </div>
+  );
+};
+
+export default Map;

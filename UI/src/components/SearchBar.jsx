@@ -16,7 +16,7 @@ const SearchBar = () => {
         <input
           className="home__search_input"
           type="text"
-          placeholder="Search Dailies"
+          placeholder="Search YumYard"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
