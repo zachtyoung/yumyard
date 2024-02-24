@@ -19,14 +19,19 @@ h3 {
 input {
 }
 .home__search_input {
-  width: 90%;
-
+  width: 100%;
+  box-sizing: border-box;
   border: none;
   height: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-indent: 1rem;
 }
 .home__search_bar {
-  display: flex;
-  flex-direction: column;
+  width: 90%;
+
+  margin: 0.5rem auto;
 }
 
 .home__saved_resturants_horizontal_list {
@@ -39,6 +44,9 @@ input {
   gap: 1rem;
   align-items: center;
   overflow-x: auto;
+}
+.home__saved_resturants_horizontal_list::-webkit-scrollbar {
+  display: none;
 }
 .home__saved_resturant_card {
   background-color: black;
